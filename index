@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Введите код</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function checkCode() {
+      var enteredCode = document.getElementById('code').value;
+      var resultDiv = document.getElementById('result');
+
+      if (enteredCode === '0604') {
+        resultDiv.innerHTML = 'SSID: TP_Link_CDA8 Пароль: 03231784';
+      } else {
+        resultDiv.innerHTML = 'Неверный код. Попробуйте еще раз.';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Введите код</h2>
+  <form>
+    <label for="code">Код:</label>
+    <input type="text" id="code" name="code" maxlength="4" minlength="4" required>
+    <br>
+    <button type="button" onclick="checkCode()">Проверить</button>
+  </form>
+  <div id="result"></div>
+</body>
+</html>
